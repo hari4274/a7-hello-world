@@ -38,6 +38,11 @@ Get Material Dashboard:
 Get Material Datatable:
     `ng generate @angular/material:material-table --name=my-table`
 
+## Upgrade Angular to any version:
+
+Go to 
+    1) https://update.angular.io
+    2) https://github.com/angular/angular-cli/
 
 ## Further help
 
