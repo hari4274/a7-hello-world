@@ -7,8 +7,18 @@ import { ActivatedRoute, Router, ParamMap } from '@angular/router';
     <h3>
       Your selected department id is {{ departmentId }}
     </h3>
-      <a (click)="goPrevious()">Previous</a>
-      <a (click)="goNext()">Next</a>
+
+    <p>
+      <button (click)="showOverview()">Overview</button>
+      <button (click)="showContact()">Contact</button>
+    <p>
+
+    <router-outlet></router-outlet>
+
+    <p>
+      <button (click)="goPrevious()">Previous</button>
+      <button (click)="goNext()">Next</button>
+    </p>
     
     <div>
       <button (click)="gotoDepartments()">Back</button>
@@ -33,14 +43,14 @@ export class DepartmentDetailComponent implements OnInit {
 
   goPrevious() {
     let previousId = this.departmentId - 1;
-    this.router.navigate(['/departments', previousId]);
-    // this.router.navigate(['../' + previousId], {relativeTo: this.route})
+    // this.router.navigate(['/departments', previousId]);
+    this.router.navigate(['../' + previousId], {relativeTo: this.route})
   }
 
   goNext() {
     let nextId = this.departmentId + 1;
-    this.router.navigate(['/departments', nextId]);
-    // this.router.navigate(['../' + nextId], {relativeTo: this.route})
+    // this.router.navigate(['/departments', nextId]);
+    this.router.navigate(['../' + nextId], {relativeTo: this.route})
   }
 
   gotoDepartments() {
@@ -49,4 +59,11 @@ export class DepartmentDetailComponent implements OnInit {
     this.router.navigate(['../', { id: selectedId}], {relativeTo: this.route})
   }
 
+  showOverview() {
+    this.router.navigate(['overview'], {relativeTo:this.route})
+  }
+
+  showContact() {
+    this.router.navigate(['contact'], { relativeTo: this.route })
+  }
 }
