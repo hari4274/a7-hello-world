@@ -6,10 +6,10 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { DepartmentDetailComponent } from './department-detail/department-detail.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/departments', pathMatch: 'full' }, //Default Route
+  { path: '', redirectTo: '/department-list', pathMatch: 'full' }, //Default Route
   // { path: '', component: DeparatmentListComponent },
-  { path: 'departments', component: DeparatmentListComponent},
-  { path: 'departments/:id', component: DepartmentDetailComponent},
+  { path: 'department-list', component: DeparatmentListComponent},
+  { path: 'department-list/:id', component: DepartmentDetailComponent},
   { path: 'employees', component: EmployeeListComponent},
   { path: '**', component: PageNotFoundComponent}
 ];
