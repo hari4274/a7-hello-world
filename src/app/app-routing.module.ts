@@ -9,7 +9,6 @@ import { DepartmentContactComponent } from './department-contact/department-cont
 
 const routes: Routes = [
   { path: '', redirectTo: '/departments', pathMatch: 'full' }, //Default Route
-  // { path: '', component: DeparatmentListComponent },
   { path: 'departments', component: DeparatmentListComponent},
   { 
     path: 'departments/:id',
